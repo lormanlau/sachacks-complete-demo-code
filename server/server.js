@@ -4,10 +4,8 @@ const axios = require('axios');
 const bodyParser = require('body-parser');
 const app = express();
 
-var port = 5000;
+app.use(express.static(path.join(__dirname, '../public')))
 
-app.use('/static', express.static(path.join(__dirname, '../public')))
-
-app.listen(port, function() { 
-    return console.log(`Server running on ${port}`)
+app.listen("5000", function() { 
+    return console.log("Server running on 5000")
 })
