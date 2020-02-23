@@ -7,5 +7,5 @@ const app = express();
 app.use(express.static(path.join(__dirname, '../public'), {index: false}))
 
 app.listen("5000", function() { 
-    return console.log("Server running on 5000")
+    console.log("Server running on 5000")
 })
